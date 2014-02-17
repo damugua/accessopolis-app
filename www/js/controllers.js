@@ -8,9 +8,8 @@ angular.module('accessopolis.controllers', [])
 
 
 // A simple controller that shows a tapped item's data
-.controller('LocationDetailCtrl', function($scope, $stateParams, PetService) {
-  // "Pets" is a service returning mock data (services.js)
-  $scope.pet = PetService.get($stateParams.locationId);
+.controller('LocationDetailCtrl', function($scope, $stateParams, LocationService) {
+  $scope.location = LocationService.get($stateParams.locationId);
 })
 
 
