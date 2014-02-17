@@ -1,0 +1,15 @@
+<!-- 
+  This template gets placed in the Pet tab's <nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+<view title="'Location Information'">
+  <content has-header="true" has-tabs="true">
+    <list>
+      <item ng-repeat="location in locations" type="item-text-wrap" href="#/tab/location/{{location.id}}">
+        <h3>{{location.title}}</h3>
+        <p>{{location.description}}</p>
+      </item>
+    </list>
+  </content>
+</view>
